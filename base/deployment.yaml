@@ -26,7 +26,7 @@ spec:
         image: quay.io/siamaksade/spring-petclinic:latest
         env:
           - name: MYSQL_URL
-            value: 'jdbc:mysql://mysql.petclinic.svc.cluster.local:3306/petclinic'
+            value: 'jdbc:mysql://test:3306/petclinic'
           - name: spring_profiles_active
             value: mysql
         livenessProbe:
