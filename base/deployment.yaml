@@ -24,6 +24,11 @@ spec:
       - name: spring-petclinic
         imagePullPolicy: Always
         image: quay.io/siamaksade/spring-petclinic:latest
+        env:
+          - name: MYSQL_URL
+            value: 'jdbc:mysql://mysql:3306/petclinic'
+          - name: spring_profiles_active
+            value: mysql
         livenessProbe:
           failureThreshold: 3
           httpGet:
