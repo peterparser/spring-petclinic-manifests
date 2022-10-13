@@ -10,6 +10,6 @@ kind: Kustomization
 resources:
 - ../../base
 images:
-- tag: latest
+- newTag: latest
   name: quay.io/siamaksade/spring-petclinic:latest
   newName: image-registry.openshift-image-registry.svc:5000/petclinic/spring-petclinic
