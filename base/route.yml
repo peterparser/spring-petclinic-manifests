@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: spring-petclinic
+  namespace: petclinic
+  labels:
+    app: spring-petclinic
+    app.kubernetes.io/instance: petclinic-application-elclown
+  annotations:
+    openshift.io/host.generated: 'true'
+spec:
+  to:
+    kind: Service
+    name: spring-petclinic
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  wildcardPolicy: None
